@@ -1,0 +1,14 @@
+VideoPlayer functionalities:
+Play,
+Forward,
+Rewind
+
+As my video player consists of Play, Forward, Rewind functionalities and they are independent states of video player
+and request to play,forward,rewind need to be handled at variant times,i think command design pattern is appropriate for this player.
+I am assuming that if users press my player play button then the action will be only play the video and after that it will not alter its
+state.For example if user press second time in play button the player will not go in pause state.
+
+My video player consists of one Command interface and three  concrete classes of it.
+I have created a VideoController which takes user request and send encapsulated request to Videoplayer receiver.
+
+

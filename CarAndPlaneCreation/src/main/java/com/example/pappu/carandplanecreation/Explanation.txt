@@ -1,0 +1,53 @@
+interface Vehicle {
+    int set_num_of_wheels()
+    int set_num_of_passengers()
+    boolean has_gas()
+}
+
+I think the Vehicle interface should be like
+interface Vehicle {
+    void set_num_of_wheels(int numWheels)
+    void set_num_of_passengers(int numPassenger)
+    boolean has_gas()
+}
+
+
+Ok, now i can create Car and Plane class simply implements Vehicle interface, example
+
+public class Car implements Vehicle{
+  @Overrride
+  void set_num_of_wheels(int numWheels){
+
+  }
+  @Overrride
+  void set_num_of_passengers(int numPassenger){
+
+  }
+  @Overrride
+  boolean has_gas(){
+
+  }
+}
+
+public class Plane implements Vehicle{
+  @Overrride
+  void set_num_of_wheels(int numWheels){
+
+  }
+  @Overrride
+  void set_num_of_passengers(int numPassenger){
+
+  }
+  @Overrride
+  boolean has_gas(){
+
+  }
+}
+
+So, here depending on different kind of conditions i can use different design pattern to create Car and Plane class object.
+If i assume that Car and Plane object should be intantiated for one time through the app running time, i can use Singletone
+design pattern for creation of those object.
+Now if the creation criteria is diferent ,like i want to hide the Car and Plane creation and need to create different object
+in every time , i will prefer Factory design pattern.By using factory design pattern, we can limit creation of object
+if we need immutable objects.
+
